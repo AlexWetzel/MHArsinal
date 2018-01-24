@@ -1,6 +1,12 @@
+import ReactTransitionGroup from 'react-addons-transition-group';
 import React, { Component } from 'react';
-import Attack from "./../../components/Attack";
+import ReactDOM from 'react-dom';
 import axios from "axios";
+// import 'gsap/TweenLite'
+// import 'gsap/CSSPlugin'
+// import {TweenLite, CSSPlugin} from "gsap";
+// import animation from './animation';
+import Attack from "./../../components/Attack";
 
 class Combo extends Component {
 
@@ -13,6 +19,7 @@ class Combo extends Component {
 	componentDidMount() {
     // Load articles after the state changes
 		this.loadMovelist();
+		// this.dom.root = ReactDOM.findDOMNode(this);
   }
 
 	loadMovelist = () => {
@@ -26,14 +33,13 @@ class Combo extends Component {
       	console.log(this.state.movelist[0].name)
       	this.setState({ attack: this.state.movelist[0] })
 
-      	this.stageMoves();
+      	this.stageMoves(this.state.movelist[0]);
       })
       .catch(err => console.log(err));
   }
 
-  stageMoves = () => {
+  stageMoves = attack => {
   	// Take the array of cancels for the current attack
-  	const attack = this.state.attack;
   	// Map them into a new array
   	const options = attack.cancels.map(cancel => {
   		// In the map function, find the index of the moveID, and take the name from that index
@@ -42,7 +48,6 @@ class Combo extends Component {
  			// console.log(i);
 
  			const i = parseInt(cancel.moveID.slice(2));
- 			console.log(i);
  			const move = this.state.movelist[i];
  			move.input = cancel.input
 
@@ -51,42 +56,57 @@ class Combo extends Component {
 
  		this.setState({ options: options })
   }
+  // Do combo
+  doCombo = option => {
+
+  	// var test = document.getElementById("title");
+  	// console.log(test)
+    // TweenLite.to(test, 1, {left:"632px"});
+
+  	const nextMove = option;
+  	this.setState({ attack: nextMove })
+  	this.stageMoves(option);
+  }
 
 	render() {
 		return (
 			<div className="container">
-				<p>
+
+				<p id="title">
 					Combo Page
 				</p>
+
 				<div className="row">
 					<div className="col s6">
+						
 						<Attack
+							id={this.state.attack.moveID}
 							key={this.state.attack.moveID}
 							name={this.state.attack.name}
 						/>
+
 					</div>
+
 					<div className="col s6">
+					<ReactTransitionGroup>
 						{this.state.options.map(option => {
 							return (
 								<Attack
+									id={option.moveID}
 									key={option.moveID}
 									name={option.name}
+									onClick={() => this.doCombo(option)}
 								/>
 							);
 						})}
+						</ReactTransitionGroup>
 					</div>
+
 				</div>
+
+
 			</div>
 		)
 	}
 }
 export default Combo;
-
-						// {this.state.movelist.map(move => {
-						// 	return (
-						// 		<Attack
-						// 			key={move.moveID}
-						// 			name={move.name}
-						// 		/>
-						// 	);
-						// })}
