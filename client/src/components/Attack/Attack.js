@@ -1,11 +1,8 @@
-import ReactTransitionGroup from 'react-addons-transition-group';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import axios from "axios";
-// import 'gsap/TweenLite'
-// import 'gsap/CSSPlugin'
-// import {TweenLite, CSSPlugin} from "gsap";
 import animation from './animation';
+import './Attack.css';
+
 
 class Attack extends Component {
 
@@ -28,9 +25,12 @@ class Attack extends Component {
 
   render() {
     return (
-      <div id={this.props.id} className="card blue-grey darken-1" {...this.props} >
-        <div className="card-content white-text">
-          <span className="card-title">{this.props.name}</span>
+      <div className="col s12">
+        <div id={this.props.id} className="card" {...this.props} >
+          <div className="card-content white-text">
+            <img className="button-icon" src="https://vignette.wikia.nocookie.net/evangelion/images/e/ec/PS_Circle_Icon.png/revision/latest?cb=20120325215235" />
+            <span className="card-title">{this.props.name}</span>
+          </div>
         </div>
       </div>
     )

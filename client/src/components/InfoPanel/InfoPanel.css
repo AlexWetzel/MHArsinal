@@ -1,0 +1,7 @@
+#info_panel {
+	position: absolute;
+	background-color: #163236;
+	color: white;
+	z-index: 1;
+	width: 100%;
+}
