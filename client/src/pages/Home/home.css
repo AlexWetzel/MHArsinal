@@ -25,15 +25,16 @@ a .weapons-window, .combo-window {
 color: black;
 }
 
-#title {
+#home-title {
+	overflow: auto;
 	background-image: url('https://www.destructoid.com//ul/483893-MonsterHunterWorld-3-1.jpg');
-	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0px -400px;
 	height: 400px;
-	color: white;
+
 }
 
-#title h1 {
-	vertical-align: middle;
+#home-title h1 {
+	color: white;
+	margin:150px;
 }

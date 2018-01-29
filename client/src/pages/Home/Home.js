@@ -4,7 +4,7 @@ import "./home.css";
 
 const Home = () =>
 	<div>
-		<div id="title" className="">
+		<div id="home-title" className="">
 	 		<h1 className="center-align">MONSTER HUNTER ARMS</h1>
 	 	</div>
 
