@@ -53,31 +53,29 @@ const Weapons = () =>
 			}
 		/>
 		<WeaponSection 
-			key={"Great Sword"}
-			name={"Great Sword"}
-			src={"./images/GS_icon.png"}
-			link={""}
-			stats={[5,1,2,3,3]}
-			text={"The greatsword is a heavy weapon capable of dealing high damage with powerful charge attacks. " +
-				"Charging a greatsowrd swing takes time, but the payoff is well worth it. " +
-				"While charging, you can cancel the charge into a tackle, letting you plough through enemy attacks without being flinched. " +
-				"The greatsowrd's weight reduces your mobility, but its relatively quick sheathing makes hit-and-run tactics viable."  +
-				"In a pinch, it can be used to block attacks, but this will wear the weapon down. " +
-				"While a hunter's skill is contingent on how well they can read they can read the monster's movements, this is doubly so for the greatsword."
+			key={"Dual Blades"}
+			name={"Dual Blades"}
+			src={"./images/DB_icon.png"}
+			link={"/dualblades"}
+			stats={[1,5,5,1,3]}
+			text={"What this weapon lacks in power, it makes up for in speed." +
+						"The dual blades are fast in every sense: attack speed, movement, evasion, and sheath speed are all top notch" +
+						"Demon mode ups the ante, granting faster movement, dash evades, and increased attack power at the cost of stamina. " +
+						"The fast attack speed makes this weapon well suited for elemental and status attacks. " + 
+						"However, the dual blades' sharpness tends to wear down fast."
 			}
 		/>
 		<WeaponSection 
-			key={"Great Sword"}
-			name={"Great Sword"}
-			src={"./images/GS_icon.png"}
-			link={""}
-			stats={[5,1,2,3,3]}
-			text={"The greatsword is a heavy weapon capable of dealing high damage with powerful charge attacks. " +
-				"Charging a greatsowrd swing takes time, but the payoff is well worth it. " +
-				"While charging, you can cancel the charge into a tackle, letting you plough through enemy attacks without being flinched. " +
-				"The greatsowrd's weight reduces your mobility, but its relatively quick sheathing makes hit-and-run tactics viable."  +
-				"In a pinch, it can be used to block attacks, but this will wear the weapon down. " +
-				"While a hunter's skill is contingent on how well they can read they can read the monster's movements, this is doubly so for the greatsword."
+			key={"Hammer"}
+			name={"Hammer"}
+			src={"./images/Ham_icon.png"}
+			link={"/hammer"}
+			stats={[4,2,4,1,4]}
+			text={"A blunt weapon made for hitting monsters in the face, knocking them out cold. " +
+						"The hammer has good mobility and weighty, powerful attacks, letting you home in on your target to deliver stunning blows. " +
+						"Charge attacks let you access different attacks while you move, and you can store your charge to boost your power " +
+						"The hammer also has strong standing combos, making the hammer an accurate weapon on immobilized monsters. " +
+						"Aiming attacks will be the greatest hurdle to learning this weapon, as its reach is poor."
 			}
 		/>
 
