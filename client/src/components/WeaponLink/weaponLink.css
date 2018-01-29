@@ -1,0 +1,17 @@
+.weapon-link {
+	background-color: #6E0A05;
+	overflow: auto;
+	margin: auto;
+	width: 360px;
+}
+
+a {
+	color: white;
+}
+
+.weapon-link img {
+	margin: 10px;
+	height: 60px;
+	width: auto;
+	float: left;
+}

@@ -238,8 +238,8 @@ class Combo extends Component {
 
 	render() {
 		return (
-			<div>
-					<div className="shade" />
+			<div id="combo-body">
+				<div className="shade" />
 				<div className="container">
 
 					

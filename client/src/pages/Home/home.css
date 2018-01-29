@@ -1,3 +1,39 @@
+
 .description {
 	font-size: 20px;
+}
+
+.section {
+	background-color: #163236;
+}
+
+/*.col .s6 {
+	margin: auto;
+}
+*/
+.description {
+	padding-bottom: 80px;
+}
+.weapons-window, .combo-window {
+	margin: auto;
+	background-image: url('https://assets.vg247.com/current//2017/12/monster_hunter_world_Jagras.jpg');
+	width: 580px;
+	height: 300px;
+}
+
+a .weapons-window, .combo-window {
+color: black;
+}
+
+#title {
+	background-image: url('https://www.destructoid.com//ul/483893-MonsterHunterWorld-3-1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0px -400px;
+	height: 400px;
+	color: white;
+}
+
+#title h1 {
+	vertical-align: middle;
 }
