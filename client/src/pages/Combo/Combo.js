@@ -2,6 +2,7 @@ import ReactTransitionGroup from 'react-addons-transition-group';
 import React, { Component } from 'react';
 import axios from "axios";
 import Attack from "./../../components/Attack";
+import Option from "./../../components/Option";
 import InfoPanel from "./../../components/InfoPanel";
 // import gamepad from "./../../utils/gamepad.js";
 import './Combo.css'
@@ -231,6 +232,8 @@ class Combo extends Component {
   }
   // Do combo
   doCombo = option => {
+  	this.child.nextAttack();
+
   	const nextMove = option;
   	this.setState({ attack: nextMove })
   	this.stageMoves(option);
@@ -246,20 +249,23 @@ class Combo extends Component {
 
 					<div className="row combo">
 						<div className="col s6">
-							
+							<ReactTransitionGroup>
 							<Attack
 								id={this.state.attack.moveID}
 								key={this.state.attack.moveID}
 								name={this.state.attack.name}
 							/>
+							</ReactTransitionGroup>
 
 						</div>
 
 						<div className="col s6">
 						<ReactTransitionGroup>
-							{this.state.options.map(option => {
+							{this.state.options.map((option, index) => {
 								return (
-									<Attack
+									<Option
+										onRef={ref => (this.child = ref)}
+										index={index}
 										id={option.moveID}
 										key={option.moveID}
 										name={option.name}

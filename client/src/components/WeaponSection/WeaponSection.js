@@ -27,7 +27,7 @@ const WeaponSection = props =>
 				{props.text}
 			</p>
 
-			<a class="waves-effect waves-light btn"><h5>Full Tutorial</h5></a>
+			<a href={props.link} class="waves-effect waves-light btn"><h5>Full Tutorial</h5></a>
 		</div>
 	</div>;
 

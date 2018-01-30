@@ -24,3 +24,7 @@
 		height: 600px;
 	z-index: 1;
 }
+
+.combo .col .s6 {
+	position: relative;
+}
