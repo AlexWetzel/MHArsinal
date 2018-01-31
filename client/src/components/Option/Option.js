@@ -15,7 +15,6 @@ class Option extends Component {
 
     this.dom.root = ReactDOM.findDOMNode(this);
     console.log("component mounted")
-    this.props.onRef(this);
   }
 
   componentWillUnmount() {
@@ -24,7 +23,8 @@ class Option extends Component {
   }
 
   componentWillEnter(cb) {
-    animation.show(this.dom.root, cb);
+    animation.enterRight(this.dom.root, cb);
+    // animation.show(this.dom.root, cb);
   }
 
   componentWillLeave(cb) {
@@ -32,21 +32,14 @@ class Option extends Component {
     // animation.moveLeft(this.dom.root, cb);
   }
 
-  nextAttack(cb) {
-    console.log("Next attack selected");
-    // animation.moveLeft(this.dom.root);
-  }
-
   render() {
-    return (
-      <div className="col s12">
+    return (      
         <div id={this.props.id} className={"card option " + "o" + this.props.index} {...this.props}>
           <div className="card-content white-text">
             <img className="button-icon" src="https://vignette.wikia.nocookie.net/evangelion/images/e/ec/PS_Circle_Icon.png/revision/latest?cb=20120325215235" />
             <span className="card-title">{this.props.name}</span>
           </div>
-        </div>
-      </div>
+        </div>     
     )
   }
 }

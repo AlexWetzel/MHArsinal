@@ -14,7 +14,8 @@ class Combo extends Component {
 	state = {
 		movelist: [],
 		attack: {},
-		options: []
+		options: [],
+		select: "1"
 	}
 
 
@@ -231,8 +232,9 @@ class Combo extends Component {
  		this.setState({ options: options })
   }
   // Do combo
-  doCombo = option => {
-  	this.child.nextAttack();
+  doCombo = (option, index) => {
+
+  	this.setState({ select: index })
 
   	const nextMove = option;
   	this.setState({ attack: nextMove })
@@ -254,6 +256,7 @@ class Combo extends Component {
 								id={this.state.attack.moveID}
 								key={this.state.attack.moveID}
 								name={this.state.attack.name}
+								select={this.state.select}
 							/>
 							</ReactTransitionGroup>
 
@@ -264,12 +267,11 @@ class Combo extends Component {
 							{this.state.options.map((option, index) => {
 								return (
 									<Option
-										onRef={ref => (this.child = ref)}
 										index={index}
 										id={option.moveID}
 										key={option.moveID}
 										name={option.name}
-										onClick={() => this.doCombo(option)}
+										onClick={() => this.doCombo(option, index)}
 									/>
 								);
 							})}

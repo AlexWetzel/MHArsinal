@@ -16,7 +16,8 @@ class Attack extends Component {
   }
 
   componentWillEnter(cb) {
-    animation.enterRight(this.dom.root, cb);
+    // console.log("option", this.props.select, "selected")
+    animation.enterRight(this.dom.root, cb, this.props.select);
     // animation.show(this.dom.root, cb);
   }
 
@@ -32,7 +33,7 @@ class Attack extends Component {
             <img className="button-icon" src="https://vignette.wikia.nocookie.net/evangelion/images/e/ec/PS_Circle_Icon.png/revision/latest?cb=20120325215235" />
             <span className="card-title">{this.props.name}</span>
           </div>
-       </div>
+      </div>
     )
   }
 }

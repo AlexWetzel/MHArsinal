@@ -1,53 +1,70 @@
 import { TweenMax, Elastic } from 'gsap';
 
-const duration = 0.5;
+// const duration = 0.5;
 
 export default {
-	show(target, cb) {
+	// show(target, cb) {
+	// 	return TweenMax
+	// 		.from(target, 0.5, {
+	// 			opacity: 0,
+	// 			height: 0,
+	// 			onComplete() {
+	// 				cb();
+	// 			},
+	// 			ease: Elastic.easeOut.config(0.25, 1),
+	// 		});
+	// },
+	// hide(target, cb) {
+	// 	return TweenMax
+	// 		.to(target, 0.5, {
+	// 			opacity: 0,
+	// 			height: 0,
+	// 			onComplete() {
+	// 				cb();
+	// 			},
+	// 			ease: Elastic.easeIn.config(0.25, 1),
+	// 		});
+	// },
+	enterRight(target, cb, select) {
+		let val = "180px";
+		switch(select) {
+			case 0:
+				val = "100px";
+				break;
+			case 1:
+				val = "180px";
+				break;
+			case 2:
+				val = "260px";
+				break;
+			case 3:
+				val = "340px";
+				break;
+		}
+
+
 		return TweenMax
-			.from(target, duration, {
-				opacity: 0,
-				height: 0,
+			.from(target, 0.5, {
+				
+					left: "55%",
+					top: val
+				,
 				onComplete() {
 					cb();
 				},
-				ease: Elastic.easeOut.config(0.25, 1),
-			});
-	},
-	hide(target, cb) {
-		return TweenMax
-			.to(target, duration, {
-				opacity: 0,
-				height: 0,
-				onComplete() {
-					cb();
-				},
-				ease: Elastic.easeIn.config(0.25, 1),
-			});
-	},
-	enterRight(target, cb) {
-		return TweenMax
-			.from(target, duration, {
-				css:{
-					left: "500px",
-					top: "180px"
-				},
-				onComplete() {
-					cb();
-				},
-				ease: Elastic.easeIn.config(0.25, 1),				
+				
 			});
 	},
 	leaveLeft(target, cb) {
 		return TweenMax
-			.to(target, duration, {
+			.to(target, 0.5, {
 				opacity: 0,
 				height: 0,
-				left: 0,
+				left: "100px",
 				onComplete() {
 					cb();
 				},
-				ease: Elastic.easeIn.config(0.25, 1),
+
 			});
 	},
 };

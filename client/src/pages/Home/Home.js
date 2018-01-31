@@ -111,7 +111,7 @@ const Home = () =>
 			 	<div className="row">
 			 		<WeaponLink
 			 			key={"Charge Blade"}
-			 			name={"Charge Blace"}
+			 			name={"Charge Blade"}
 			 			link={"/chargeblade"}
 			 			src={"./images/CB_icon.png"}
 			 		/>
