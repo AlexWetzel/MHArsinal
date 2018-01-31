@@ -700,10 +700,6 @@ const movelistSeed = [
       {
         moveID: "CB14",
         input: "R2 + triangle"
-      },
-      {
-        moveID: "CB23",
-        input: "dir. + circle"
       }
     ]
   },
