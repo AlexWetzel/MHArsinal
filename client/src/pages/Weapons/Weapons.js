@@ -5,12 +5,40 @@ import './weapons.css'
 
 const Weapons = () =>
 	<div>
+		<div id="weapon-title">
+			<div className="title-shade"></div>
+			<h1 className="center-align">Weapons Overview</h1>
+
+		</div>
 
 		<div className="container">
-			<h1>Weapons Overview</h1>
+
 		
 			<div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet mauris,</p>
+				<h2>Introduction</h2>
+				<hr />
+				<p>
+					The Monster Hunter series is known for its mechanical depth and its slow, methodical combat.
+					While most action games have lightning-fast attacks for quick reacting aand responsive controls, Monster Hunter's weapons are relatively slow in comparison.
+					This is because the weapon's animations are lengthy, which sells the weight of each weapon, making attack motions satisfying.
+					On the other hand, players used to fast action games get the impression that the combat is clunky and unresponsive.
+					The key to understanding the combas is to adapt to the pace, calculate moves carefully, predict the monsters' movements, and look for openings to exploit, rather than mashing buttons and dodging attack on reaction.
+					<br/>
+					<br/>
+					That being said Monster Hunter World has 14 different weapon types, each with their own strengths and weaknesses.
+					Even if someone has trouble adapting to Monster Hunter, there is likely to be a weapon that suits their preferred playstyle.
+					To give a general sense of the weapons Monster Hunter Arms has given each one ranking based on severall attributes:
+
+					<blockquote>
+						<ul>
+							<li><b>Power</b>: The damage potential of the weapon's strongest or most used attacks</li>
+							<li><b>Speed</b>: The amount of attacks a weapon is capable of in a given time</li>
+							<li><b>Mobility</b>: How well a weapon is able to move while drawn</li>
+							<li><b>Defense</b>: The weapon's ability to handle oncoming attacks directly</li>
+							<li><b>Support</b>: How well a weapon can synergize with fellow hunters.</li>
+						</ul>
+					</blockquote>
+				</p>
 			</div>
 		</div>
 

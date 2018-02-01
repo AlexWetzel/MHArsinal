@@ -1,3 +1,25 @@
-ul {
-	list-style-type: disc;
+#chargeblade-title {
+	position: relative;
+	background-image: url('./images/SAED.jpg');
+	background-size: cover;
+		background-position: 0px -450px;
+	height: 400px;
+}
+
+#chargeblade-title .title-shade {
+	position: absolute;
+
+	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
+
+	opacity: 0.6;
+	margin: 150px 0px;
+	height: 60px;
+	width: 100%;
+}
+
+#chargeblade-title h1 {
+	position: absolute;
+	width: 100%;
+	color: white;
+	margin:150px 0px;
 }

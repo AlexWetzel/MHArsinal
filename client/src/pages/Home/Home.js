@@ -5,6 +5,7 @@ import "./home.css";
 const Home = () =>
 	<div>
 		<div id="home-title" className="">
+			<div className="title-shade"></div>
 	 		<h1 className="center-align">MONSTER HUNTER ARMS</h1>
 	 	</div>
 
@@ -12,7 +13,12 @@ const Home = () =>
 	 		<div className="container">
 	 		<h3>Learn the weapons of Monster Hunter</h3>
 	 		<hr />
-	 		<p>Monster Hunter World offers a</p>
+	 		<p>
+		 		With 14 uniqe weapons Monster Hunter World offers a variety of ways to hunt your prey.
+		 		However, mastering just one weapon can be difficult.
+		 		Monster Hunter Arms not only offers comprehensive weapon breakdowns, but also an interactive flowchart that displays every option after each attack.
+
+	 		</p>
 	 		</div>
 
 	 		<div className="section">
@@ -20,18 +26,19 @@ const Home = () =>
 		 			<div className=" col s6">
 		 				<a href="/weapons">
 			 				<div className="weapons-window">
-				 				<div className="white">
-				 					<h5>Weapons Page</h5>
-				 				</div>
+				 				<div className="window-shade"></div>
+				 				<h3 className="center-align">Weapons Page</h3>
+
 			 				</div>
 		 				</a>
 		 			</div>
 		 			<div className="col s6">
 		 				<a href="/combo">
 				 			<div className="combo-window">
-				 				<div className="white">
-				 					<h5>Combo test</h5>
-				 				</div>
+				 				<div className="window-shade"></div>
+
+				 				<h3 className="center-align">Combo Test</h3>
+	
 			 				</div>
 		 				</a>
 		 			</div>

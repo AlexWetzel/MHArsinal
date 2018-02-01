@@ -3,6 +3,10 @@ nav {
 	background-color: #6E0A05;
 }
 
+.dropdown-button {
+	width: 200px;
+}
+
 nav ul a{
 	font-size: 20px;
 }

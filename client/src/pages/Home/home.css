@@ -5,6 +5,8 @@
 
 .section {
 	background-color: #163236;
+	margin: 50px 0px;
+	padding: 30px 0px;
 }
 
 /*.col .s6 {
@@ -15,17 +17,37 @@
 	padding-bottom: 80px;
 }
 .weapons-window, .combo-window {
+
+	position: relative;
 	margin: auto;
 	background-image: url('https://assets.vg247.com/current//2017/12/monster_hunter_world_Jagras.jpg');
+	background-size: cover;
 	width: 580px;
 	height: 300px;
 }
 
-a .weapons-window, .combo-window {
-color: black;
+
+
+.weapons-window h3, .combo-window h3{
+	position: absolute;
+	margin: 130px 0px;
+	width: 100%;
 }
 
+.weapons-window .window-shade, .combo-window .window-shade{	
+	position: absolute;
+
+	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
+
+	opacity: 0.6;
+	margin: 130px 0px;
+	height: 44px;
+	width: 100%;
+}
+
+
 #home-title {
+	position: relative;
 	overflow: auto;
 	background-image: url('https://www.destructoid.com//ul/483893-MonsterHunterWorld-3-1.jpg');
 	background-size: cover;
@@ -34,7 +56,20 @@ color: black;
 
 }
 
+#home-title .title-shade {
+	position: absolute;
+
+	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
+
+	opacity: 0.6;
+	margin: 150px 0px;
+	height: 60px;
+	width: 100%;
+}
+
 #home-title h1 {
+	position: absolute;
+	width: 100%;
 	color: white;
-	margin:150px;
+	margin:150px 0px;
 }
