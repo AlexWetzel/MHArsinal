@@ -439,6 +439,7 @@ class Combo extends Component {
 										id={option.moveID}
 										key={option.moveID}
 										name={option.name}
+										input={option.input}
 										onClick={() => this.doCombo(option, index)}
 									/>
 								);

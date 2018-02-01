@@ -9,7 +9,11 @@ const Home = () =>
 	 	</div>
 
 	  <div className="center-align white description">
-	 		<p>Learn the weapons of monster hunter</p>
+	 		<div className="container">
+	 		<h3>Learn the weapons of Monster Hunter</h3>
+	 		<hr />
+	 		<p>Monster Hunter World offers a</p>
+	 		</div>
 
 	 		<div className="section">
 		 		<div className="row container">

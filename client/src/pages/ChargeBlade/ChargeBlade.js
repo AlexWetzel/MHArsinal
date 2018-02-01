@@ -1,4 +1,5 @@
 import React from 'react';
+import './chargeBlade.css'
 
 const ChargeBlade = () =>
 	<div className="container">
@@ -15,6 +16,8 @@ const ChargeBlade = () =>
 			The charge blade is compared to the Swiss army knife for a reason.
 		</p>
 
+		<br/>
+
 		<h3>Understanding Phials</h3>
 		<p>
 			The charge blade has a core mechanic that creates synergy between sword mode and axe mode.
@@ -30,30 +33,37 @@ const ChargeBlade = () =>
 
 		</p>
 
+		<br/>
+
 		<h3>Basic Flow</h3>
 		<p>The charge blade can be boiled down to a few simple steps:</p>
-		<ul>
-			<li>Attack in sword mode to build phial energy, then load the energy in your shield.</li>
-			<li>Use the energy in the shield to then charge up the shield, boosting your power.</li>
-			<li>Keep attacking in sword mode to gain more phials.</li>
-			<li>When an opening appears, morph to axe mode and use elemental attacks to deal damage.</li>
-		</ul>
-		<p>There's much more to the charge blade than what's listed here, but this is just to give a big picture on how the weapon should be used.</p>
-
+			<ul>
+				<li>Attack in sword mode to build phial energy, then load the energy in your shield.</li>
+				<li>Use the energy in the shield to then charge up the shield, boosting your power.</li>
+				<li>Keep attacking in sword mode to gain more phials.</li>
+				<li>When an opening appears, morph to axe mode and use elemental attacks to deal damage.</li>
+			</ul>
+		<p>
+			There's much more to the charge blade than what's listed here, but this is just to give a big picture on how the weapon should be used.
+		</p>
+		<br/>
+		<br/>
 
 		<h3>Sword Mode</h3>
+
+		<hr />
 
 		<p>
 			The main purpose of sword mode is to build phials, but it has mobility and guard capabilities that the axe is lacking.
 			Sword mode is also able to combo into the axe's most powerful attack.
 			For these reasons, sword mode will be used for the majority of the time hunting.
-
+			<br/>
 			<h4>Basic attacks</h4>
 			
 			Pressing &#9651; three times does a basic combo: Two quick slashes ending in a spinning slash. <br />
 			When you're standing still or running &#9651; +	&#9898;	will perform a forward slash, which is good for closing distance.
 			This will substitute the fist hit in a basic combo.
-
+			<br/>
 			<h4>Charged Slash</h4>
 
 			Holding 	&#9898;	 will charge up the charged double slash.
@@ -61,6 +71,7 @@ const ChargeBlade = () =>
 			 Releasing the button too early or too late will result in a weaker version, the charged slash.
 			 Release the button when the sword is positioned behind the your back.
 
+			<br/>
 			<h4>Sliding Slash</h4>
 
 			Tilting the left stick and pressing &#9898; after an attack will perform the sliding slash.
@@ -72,7 +83,7 @@ const ChargeBlade = () =>
 			Pressing &#9651; + &#9898; after any sword attack will thrust your shield in front of you, hitting twice at close range.
 			This move is fast, and is good for chaining two charged double slashes together.
 			More importantly this move can combo into the axe mode's amped element discharge, which will be discussed later.
-
+			<br/>
 			<h4>Phial Load</h4>
 
 			When enough phial energy is charged, the phial icon in the top left corner will glow.
@@ -83,8 +94,12 @@ const ChargeBlade = () =>
 			From a phial load, you can use the shield thrust, transform into element dicharge I, or use the condensed element slash.
 
 		</p>
+		<br />
+		<br />
 
 		<h3>Charging your shield</h3>
+
+		<hr />
 
 		<p>
 			Before discussing axe mode, we need to understand the benefits to charging the shield, as this should take priority over using phials for axe attacks.<br />
@@ -103,6 +118,8 @@ const ChargeBlade = () =>
 				<li>The amped element discharge upgrades to the super amped element discharge</li>
 			</ul>
 
+			<br/>
+
 			<h4>Condensed Element Slash</h4>
 
 			After a phial load, hold &#9651; to charge energy into your sword.
@@ -116,7 +133,12 @@ const ChargeBlade = () =>
 			While this move can still be used without a charged shield, all of the special effects are absent, making it practically useless.
 		</p>
 
+		<br />
+		<br />
+
 		<h3>Axe Mode</h3>
+
+		<hr />
 
 		<p>
 			Once the shield is charged, and we've loaded more phials, it's time to morph into axe mode and deal some serious damage.

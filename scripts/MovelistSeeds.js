@@ -31,7 +31,7 @@ const movelistSeed = [
       },
       {
         moveID: "CB02",
-        input: "fwd + triangle"
+        input: "fwd-plus-triangle"
       },
       {
         moveID: "CB03",
@@ -49,25 +49,25 @@ const movelistSeed = [
         moveID: "CB04",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB10",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       }
     ]
   },
@@ -81,29 +81,29 @@ const movelistSeed = [
         moveID: "CB05",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -123,12 +123,12 @@ const movelistSeed = [
       },
       {
         moveID: "CB20",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       // SAED, need to implement properly
       // {
       //   moveID: "CB21",
-      //   input: "triangle + circle"
+      //   input: "triangle-plus-circle"
       // },
       {
         moveID: "CB22",
@@ -146,29 +146,29 @@ const movelistSeed = [
         moveID: "CB05",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -182,29 +182,29 @@ const movelistSeed = [
         moveID: "CB06",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -214,29 +214,29 @@ const movelistSeed = [
     description:
       "A counter-clockwise spin ending in a strong slash. The shield will block attacks while you swing the sword.",
     cancels: [
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -252,19 +252,19 @@ const movelistSeed = [
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -280,19 +280,19 @@ const movelistSeed = [
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -306,34 +306,34 @@ const movelistSeed = [
         moveID: "CB04",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       }, 
       {
         moveID: "CB011",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       }, 
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB20",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       // SAED, need to implement properly
       // {
       //   moveID: "CB21",
-      //   input: "triangle + circle"
+      //   input: "triangle-plus-circle"
       // },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }   
     ]
   },
@@ -347,29 +347,29 @@ const movelistSeed = [
         moveID: "CB05",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -381,12 +381,12 @@ const movelistSeed = [
     cancels: [
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
-      {
-        moveID: "CB12",
-        input: "triangle"
-      },
+      // {
+      //   moveID: "CB12",
+      //   input: "triangle"
+      // },
       {
         moveID: "CB13",
         input: "hold triangle"
@@ -407,29 +407,29 @@ const movelistSeed = [
         moveID: "CB06",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -443,29 +443,29 @@ const movelistSeed = [
         moveID: "CB06",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -485,12 +485,12 @@ const movelistSeed = [
       },
       {
         moveID: "CB20",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       // SAED, need to implement properly
       // {
       //   moveID: "CB21",
-      //   input: "triangle + circle"
+      //   input: "triangle-plus-circle"
       // },
       {
         moveID: "CB22",
@@ -546,7 +546,7 @@ const movelistSeed = [
     cancels: [
       {
         moveID: "CB15",
-        input: "fwd + triangle"
+        input: "fwd-plus-triangle"
       },
       {
         moveID: "CB18",
@@ -574,12 +574,12 @@ const movelistSeed = [
       },
       {
         moveID: "CB20",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       // SAED, need to implement properly
       // {
       //   moveID: "CB21",
-      //   input: "triangle + circle"
+      //   input: "triangle-plus-circle"
       // },
       {
         moveID: "CB22",
@@ -648,29 +648,29 @@ const movelistSeed = [
         moveID: "CB04",
         input: "triangle"
       },
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       },
       {
         moveID: "CB23",
-        input: "dir. + circle"
+        input: "dir-plus-circle"
       }
     ]
   },
@@ -681,25 +681,25 @@ const movelistSeed = [
       "An evasive slide ending in a spinning slash.",
     cancels: [
     // Check to see if the sword combo can be cancled into
-      {
-        moveID: "CB07",
-        input: "circle"
-      },
+      // {
+      //   moveID: "CB07",
+      //   input: "circle"
+      // },
       {
         moveID: "CB08",
         input: "hold circle"
       },
       {
         moveID: "CB09",
-        input: "triangle + circle"
+        input: "triangle-plus-circle"
       },
       {
         moveID: "CB11",
-        input: "R2 + circle"
+        input: "R2-plus-circle"
       },
       {
         moveID: "CB14",
-        input: "R2 + triangle"
+        input: "R2-plus-triangle"
       }
     ]
   },

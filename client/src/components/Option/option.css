@@ -3,6 +3,58 @@
 	left: 55%;
 }
 
+.first-icon, .second-icon {
+	margin-top: -5px;
+	height: 40px;
+	width: 40px;
+	float: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.option p {
+	float: left;
+	font-weight: bold;
+}
+
+.option .secondary-icon {
+	float: left;
+}
+
+.triangle .first-icon,
+.triangle-plus-circle .first-icon,
+.R2-plus-triangle .second-icon,
+.fwd-plus-triangle .second-icon {
+	background-image: url('./images/triangle.png');
+}
+
+.circle .first-icon,
+.R2-plus-circle .second-icon,
+.dir-plus-circle .second-icon,
+.triangle-plus-circle .second-icon {
+	background-image: url('./images/circle.png');
+}
+
+.R2 .first-icon,
+.R2-plus-circle .first-icon,
+.R2-plus-triangle .first-icon {
+	background-image: url('./images/R2.png');
+}
+
+.fwd-plus-triangle .first-icon {
+	background-image: url('./images/up_left.png');
+}
+
+.dir-plus-circle .first-icon {
+	background-image: url('./images/left_stick.png');
+}
+
+.triangle .secondary-icon,
+.circle .secondary-icon,
+.R2 .secondary-icon {
+	display: none;
+}
+
 .o0 {
 	top: 100px;
 }
@@ -34,12 +86,3 @@
 .o7 {
 	top: 660px;
 }
-
-.o8 {
-
-}
-
-.o9 {
-
-}
-

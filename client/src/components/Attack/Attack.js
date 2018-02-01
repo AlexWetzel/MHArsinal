@@ -30,7 +30,6 @@ class Attack extends Component {
     return (
       <div id={this.props.id} className="attack card" {...this.props} >
           <div className="card-content white-text">
-            <img className="button-icon" src="https://vignette.wikia.nocookie.net/evangelion/images/e/ec/PS_Circle_Icon.png/revision/latest?cb=20120325215235" />
             <span className="card-title">{this.props.name}</span>
           </div>
       </div>
