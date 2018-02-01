@@ -1,18 +1,19 @@
-import createJoyMap, { createQueryModule } from 'joymap';
-// import createJoyMap, { createEventModule } from 'joymap';
+// var dualShock = require('dualshock-controller');
+// import dualshock from 'dualshock-controller';
 
-export default {
-	joyevent() {
-		// const joyMap = createJoyMap();
-		// const module = createEventModule();
+// const controller = dualshock(
+// 	{
+//       //you can use a ds4 by uncommenting this line.
+//     config: "dualshock4-generic-driver",
+//     //if using ds4 comment this line.
+//     // config : "dualShock3",
+//     //smooths the output from the acelerometers (moving averages) defaults to true
+//     accelerometerSmoothing : true,
+//     //smooths the output from the analog sticks (moving averages) defaults to false
+//     analogStickSmoothing : false
+// 	}
+// );
 
-		// joyMap.addModule(module);
-		// joyMap.addButtonEvent('A + B + !X + !Y', () => console.log('A & B pressed at the same time but not X nor Y'));
-		// joyMap.addButtonEvent('X + X.justChanged + Y', () => console.log('X is pressed & justChanged and Y is pressed'));
-		// joyMap.addButtonEvent('B + !B.justChanged', () => console.log('B pressed but not changed'));
-		// joyMap.start();
-	},
-	testfile()  {
-		console.log("Hello World");
-	}
-};
+// controller.on('error', err => console.log(err));
+
+// controller.on('connection:change', data => console.log(data));

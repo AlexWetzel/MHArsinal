@@ -21,7 +21,7 @@ mongoose.connect(
 const movelistSeed = [
   {
     moveID: "CB00",
-    name: "Sheath weapon",
+    name: "Neutral Stance (Sheathe Weapon)",
     description:
       "In this state, you are able to move freely and use/gather items.",
     cancels: [
@@ -41,9 +41,9 @@ const movelistSeed = [
   },
   {
     moveID: "CB01",
-    name: "Unsheathe weapon",
+    name: "Draw Weapon",
     description:
-      "Unsheathe your weapon into a neutral stance without attacking.",
+      "Draw your weapon into a neutral stance without attacking.",
     cancels: [
       {
         moveID: "CB04",
@@ -73,9 +73,9 @@ const movelistSeed = [
   },
   {
     moveID: "CB02",
-    name: "Unsheathe attack",
+    name: "Sword: Forward Slash",
     description:
-      "Unsheathe your weapon into a sword slash, acting as the first hit in a weak combo.",
+      "Draw your weapon into a sword slash, acting as the first hit in a basic combo.",
     cancels: [
       {
         moveID: "CB05",
@@ -109,9 +109,9 @@ const movelistSeed = [
   },
   {
     moveID: "CB03",
-    name: "Unsheathe morph attack",
+    name: "Axe: Smash",
     description:
-      "Unsheathe your weapon into axe mode. The beginning of the attack acts as a guard.",
+      "Draw your weapon into axe mode. The beginning of the attack acts as a guard.",
     cancels: [
       {
         moveID: "CB16",
@@ -138,7 +138,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB04",
-    name: "Sword attack 1",
+    name: "Sword: Weak Slash",
     description:
       "A forward slash. First hit in a basic, 3-hit combo.",
     cancels: [
@@ -174,7 +174,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB05",
-    name: "Sword attack 2",
+    name: "Sword: Return Stroke",
     description:
       "A backward-moving slash. Second hit in a basic, 3-hit combo.",
     cancels: [
@@ -210,7 +210,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB06",
-    name: "Spinning slash",
+    name: "Sword: Spinning Slash",
     description:
       "A counter-clockwise spin ending in a strong slash. The shield will block attacks while you swing the sword.",
     cancels: [
@@ -242,7 +242,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB07",
-    name: "Charge slash",
+    name: "Sword: Charged Rising Slash",
     description:
       "An upward sword slash. An incorrectly timed sword charge will result in this move. Release the button when the sword is behind your back",
     cancels: [
@@ -270,7 +270,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB08",
-    name: "Charge double slash",
+    name: "Sword: Charged Double Slash",
     description:
       "Strong upward and downward sword slashes. A powerful move that charges phials well.",
     cancels: [
@@ -298,7 +298,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB09",
-    name: "Shield thrust",
+    name: "Sword: Shield thrust",
     description:
       "Thrust the shield forward, dealing 2 hits.",
     cancels: [
@@ -339,7 +339,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB10",
-    name: "Running slash",
+    name: "Sword: Forward Slash",
     description:
       "A forward moving slash that can substitute the fist hit in a basic combo.",
     cancels: [
@@ -375,7 +375,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB11",
-    name: "Load phials",
+    name: "Sword: Charge Phials",
     description:
       "Load the phial charge into your shield. Yellow charge loads 3 phials, and red charge loads 5. If phial charge is too low, no phials are charged, and the animation is longer.",
     cancels: [
@@ -399,7 +399,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB12",
-    name: "Elemental slash",
+    name: "Sword: Return Stroke",
     description:
       "After a phial load, remove the sword in a slashing motion.",
     cancels: [
@@ -435,7 +435,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB13",
-    name: "Condensed elemental slash",
+    name: "Sword: Condensed elemental slash",
     description:
       "After a phial load, charge the sword in the shield, and release as the shield clamps down on the sword to do a powerful slash. If the shield has been charged with phial energy, the attack becomes much stronger. Furthermore, the sword will gain the weapon's phial effect, and wil no longer bounce as long as the buff is active.",
     cancels: [
@@ -471,7 +471,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB14",
-    name: "Morph to axe",
+    name: "Sword: Morph Slash",
     description:
       "Insert the sword into your shield, transitioning into an overhead slash.",
     cancels: [
@@ -500,7 +500,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB15",
-    name: "Running downward chop",
+    name: "Axe: Dash Slam",
     description:
       "Run forward, swinging your axe down.",
     cancels: [
@@ -520,7 +520,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB16",
-    name: "Upward swing",
+    name: "Axe: Rising Slash",
     description:
       "Swing your axe in an upward motion above your head.",
     cancels: [
@@ -540,7 +540,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB17",
-    name: "Downward chop",
+    name: "Axe: Overhead Slash",
     description:
       "Swing your axe downward vertically.",
     cancels: [
@@ -560,7 +560,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB18",
-    name: "Elemental attack 1",
+    name: "Axe: Elemental Discharge I",
     description:
       "A quick horizontal axe swing. With loaded phials, deals extra damage and one phial explosion on impact. Costs 1 phial.",
     cancels: [
@@ -589,7 +589,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB19",
-    name: "Elemental attack 2",
+    name: "Axe: Elemental Discharge II",
     description:
       "An overhead double axe swing. With loaded phials, deals extra damage and does one phial explosion for each impact. Costs 1 phial.",
     cancels: [
@@ -614,7 +614,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB20",
-    name: "Amped element disharge",
+    name: "Axe: Amped Element Disharge",
     description:
       "A strong overhead downward chop. With loaded phials, deals extra damage and three phial explosions on impact. Costs 1 phial. Transforms into sword mode.",
     cancels: [
@@ -627,7 +627,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB21",
-    name: "Amped element disharge",
+    name: "Axe: Super Amped Element Disharge",
     description:
       "A strong overhead downward chop. With loaded phials, deals extra damage and three phial explosions on impact. Costs 1 phial. Transforms into sword mode.",
     cancels: [
@@ -640,7 +640,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB22",
-    name: "Morph to sword",
+    name: "Axe: Morph Slash",
     description:
       "Split the axe in a spinning motion ending in a slash.",
     cancels: [
@@ -676,7 +676,7 @@ const movelistSeed = [
   },
   {
     moveID: "CB23",
-    name: "Sliding slash",
+    name: "Sword: Sliding Slash",
     description:
       "An evasive slide ending in a spinning slash.",
     cancels: [

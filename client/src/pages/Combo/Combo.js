@@ -7,11 +7,60 @@ import InfoPanel from "./../../components/InfoPanel";
 import gamepad from "./../../utils/gamepad.js";
 import './Combo.css'
 
-import Gamepad from 'react-gamepad';
+// import Gamepad from 'react-gamepad';
+
+
+			// <Gamepad
+   //      onConnect={this.connectHandler}
+   //      onDisconnect={this.disconnectHandler}
+
+   //      onButtonChange={this.buttonChangeHandler}
+
+   //       gamepadIndex={0}
+   //    >
+   //    	<br />
+   //    </ Gamepad>
+			// <Gamepad
+   //      onConnect={this.connectHandler}
+   //      onDisconnect={this.disconnectHandler}
+
+   //      onButtonChange={this.buttonChangeHandler}
+
+   //       gamepadIndex={1}
+   //    >
+   //    	<br />
+   //    </ Gamepad>
+			// <Gamepad
+   //      onConnect={this.connectHandler}
+   //      onDisconnect={this.disconnectHandler}
+
+   //      onButtonChange={this.buttonChangeHandler}
+
+   //       gamepadIndex={2}
+   //    >
+   //    	<br />
+   //    </ Gamepad>
 
 
 
 class Combo extends Component {
+
+	constructor() {
+		super();
+
+		this.start;
+		this.interval;
+		this.valid;
+		this.sensitivity = 5;
+
+		//Each used button combination gets a counter
+		this.circle = 0;
+		this.circleTriangle = 0;
+		this.circleRTwo = 0;
+		this.triangle = 0;
+		this.triangleRTwo = 0;
+		this.rTwo = 0;
+	}
 
 	state = {
 		movelist: [],
@@ -24,187 +73,293 @@ class Combo extends Component {
 	componentDidMount() {
     // Load articles after the state changes
 
+    this.valid = 2;
+    console.log(this.valid);
+
 		this.loadMovelist();
+		this.gamepadListener();
+
+
 
 
 		// window.addEventListener("gamepadconnected", gamepadAPI.connect);
 		// window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);
   }
 
-  connectHandler(gamepadIndex) {
-    console.log(`Gamepad ${gamepadIndex} connected !`)
-  }
+  // connectHandler(gamepadIndex) {
+  //   console.log(`Gamepad ${gamepadIndex} connected !`)
+  // }
 
-  disconnectHandler(gamepadIndex) {
-    console.log(`Gamepad ${gamepadIndex} disconnected !`)
-  }
+  // disconnectHandler(gamepadIndex) {
+  //   console.log(`Gamepad ${gamepadIndex} disconnected !`)
+  // }
 
-   buttonChangeHandler(buttonName, down) {
-    console.log(buttonName, down)
-  }
+  //  buttonChangeHandler(buttonName, down) {
+  //   console.log(buttonName, down)
+  // }
   // COntroller inputs ==============================================================================
+	buttonPressed = b => {
+	  if (typeof(b) == "object") {
+	    return b.pressed;
+	  }
+	  return b == 1.0;
+	}
 
- //  gamepad = () => {
- //  	var start;
- //  	var interval;
- //  	var valid;
+  gameLoop = () => {
+	  var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+	  //if can't find gamepads without Unknown Gamepad
+	  if (!gamepads[this.valid]) {
+	  	console.log("game loop stopped.");
+	    return;
+	  }
+  
 
- //  // 	window.addEventListener("gamepadconnected", function(e) {
-	// 	//   var gp = navigator.getGamepads()[e.gamepad.index];
-	// 	//   let gamepadInfo = "Gamepad connected at index " + gp.index + ": " + gp.id + ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
-	// 	//   console.log(gamepadInfo);
-
-	// 	//   gameLoop();
-	// 	// });
-
-	// 	window.addEventListener("gamepaddisconnected", function(e) {
-	// 	  let gamepadInfo = "Waiting for gamepad.";
-	// 	  console.log(gamepadInfo);
-
-	// 	  // cancelRequestAnimationFrame(start);
-	// 	});
+	  const gp = gamepads[this.valid];
 
 
+	  // const = input;
+	  if(gp.axes[1] < -0.9 && this.buttonPressed(gp.buttons[3])) {
+	  	console.log("triangle fwd");
+	  	this.findInput("fwd + triangle");
+	  }
 
-	// 	if (!('ongamepadconnected' in window)) {
-	// 	  // No gamepad events available, poll instead.
-	// 	  console.log("Checking for gamepads");
-	// 	  interval = setInterval(pollGamepads, 500);
-	// 	}
+	  else if (this.buttonPressed(gp.buttons[1]) && (gp.axes[0] < -0.9 || gp.axes[0] > 0.9 || gp.axes[1] < -0.9 || gp.axes[1] > 0.9)) {
+	  	console.log("dir. circle");
+	  	this.findInput("dir. + circle");
+	  }
+	
+	  else if (this.buttonPressed(gp.buttons[1])) {
+	  	//circle
+	    // console.log("Circle pressed!");
+	    if (this.buttonPressed(gp.buttons[3])) {
+	    	this.circleTriangle ++;
 
-	// 	function validGamepad(i) {
+	    	if (this.circleTriangle === this.sensitivity) {
+	    		console.log("circle triangle");
 
-	// 		var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+	    		this.findInput("triangle + circle");
+	    	}
 
-	// 	  var gp = gamepads[i];
-	// 	  // console.log(gp);
- //    	if (gp.id.slice(0, 15) !== "Unknown Gamepad") {
- //    		console.log("Valid gamepad detected");
- //    		valid = i;
- //    		gameLoop();
- //    	}
+	    } else if (this.buttonPressed(gp.buttons[7])) {
+	    	this.circleRTwo ++;
 
-	// 	  console.log("Gamepad invalid");
-	// 	  return false
-	// 	}
+	    	if (this.circleRTwo === this.sensitivity) {
+	    		console.log("circle R2");
 
-	// 	function pollGamepads() {
-	// 	  var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
-	// 	  for (var i = 0; i < gamepads.length; i++) {
-	// 	    var gp = gamepads[i];
-	// 	    if (gp) {
-	// 	      let gamepadInfo = "Gamepad connected at index " + gp.index + ": " + gp.id +
-	// 	        ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
+	    		this.findInput("R2 + circle");
+	    	}
+	    } else {
+	    	this.circle ++;
 
-	// 	      console.log(gamepadInfo);
-	// 		  	validGamepad(i);
-	// 		  	clearInterval(interval);
+	    	if (this.circle === this.sensitivity) {
+	    		console.log("circle");
+
+	    		this.findInput("circle");
+	    	}
+	    }
+	  }
+	  
+	  else if (this.buttonPressed(gp.buttons[3])) {
+	  	//triangle
+	    console.log("Triangle pressed!");
+	    if (this.buttonPressed(gp.buttons[7])) {
+	    	this.triangleRTwo ++;
+
+	    	if (this.triangleRtwo === this.sensitivity) {
+	    		console.log("R2 + triangle");
+	    		this.findInput("R2 + triangle");
+	    	}
+	    }	else {
+	    	this.triangle ++;
+	    	if (this.triangle === this.sensitivity) {
+	    		console.log("triangle");
+	    		this.findInput("triangle");
+	    	}
+	    }
+	    	    // this.findInput();
+	  }
+	  else if (this.buttonPressed(gp.buttons[7])) {
+	    // console.log("R2");
+	    this.rTwo ++;
+    	if (this.ttriangle === this.sensitivity) {
+    		console.log("triangle");
+    		this.findInput("triangle");
+    	}
+	  }
+
+
+	 
+	  // console.log("loop again");
+	  this.start = requestAnimationFrame(this.gameLoop);
+	}
+
+	validGamepad = i => {
+
+		const gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+
+	  const gp = gamepads[i];
+	  // console.log(gp);
+  	if (gp.id.slice(0, 15) !== "Unknown Gamepad") {
+  		console.log("Valid gamepad detected");
+  		this.valid = i;
+  		this.gameLoop();
+  	}
+
+	  console.log("Gamepad invalid");
+	  return false;
+	}
+	pollGamepads = () => {
+
+		console.log("pollGamepads called")
+	  const gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+	  for (let i = 0; i < gamepads.length; i++) {
+	    const gp = gamepads[i];
+	    if (gp) {
+	      const gamepadInfo = "Gamepad connected at index " + gp.index + ": " + gp.id +
+	        ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
+
+	      console.log(gamepadInfo);
+		  	this.validGamepad(i);
+		  	clearInterval(this.interval);
+			  
+	    }
+	  }
+	}
+
+  gamepadListener = () => {
+  	// var start;
+  	// var interval;
+  	// var valid;
+
+  // 	window.addEventListener("gamepadconnected", function(e) {
+		//   var gp = navigator.getGamepads()[e.gamepad.index];
+		//   let gamepadInfo = "Gamepad connected at index " + gp.index + ": " + gp.id + ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
+		//   console.log(gamepadInfo);
+
+		//   gameLoop();
+		// });
+
+		window.addEventListener("gamepaddisconnected", function(e) {
+		  let gamepadInfo = "Waiting for gamepad.";
+		  console.log(gamepadInfo);
+
+		  // cancelRequestAnimationFrame(start);
+		});
+
+
+
+		if (!('ongamepadconnected' in window)) {
+		  // No gamepad events available, poll instead.
+		  console.log("Checking for gamepads");
+		  this.interval = setInterval(this.pollGamepads, 500);
+		  // this.interval = setInterval(console.log(this.message), 500);
+		}
+
+		// function validGamepad(i) {
+
+		// 	var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+
+		//   var gp = gamepads[i];
+		//   // console.log(gp);
+  //   	if (gp.id.slice(0, 15) !== "Unknown Gamepad") {
+  //   		console.log("Valid gamepad detected");
+  //   		valid = i;
+  //   		gameLoop();
+  //   	}
+
+		//   console.log("Gamepad invalid");
+		//   return false
+		// }
+
+		// function pollGamepads() {
+		//   var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+		//   for (var i = 0; i < gamepads.length; i++) {
+		//     var gp = gamepads[i];
+		//     if (gp) {
+		//       let gamepadInfo = "Gamepad connected at index " + gp.index + ": " + gp.id +
+		//         ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
+
+		//       console.log(gamepadInfo);
+		// 	  	validGamepad(i);
+		// 	  	clearInterval(interval);
 				  
-	// 	    }
-	// 	  }
+		//     }
+		//   }
 
 
-	// 	}
+		// }
 
-	// 	function buttonPressed(b) {
-	// 	  if (typeof(b) == "object") {
-	// 	    return b.pressed;
-	// 	  }
-	// 	  return b == 1.0;
-	// 	}
+		// function buttonPressed(b) {
+		//   if (typeof(b) == "object") {
+		//     return b.pressed;
+		//   }
+		//   return b == 1.0;
+		// }
 
-	// 	function gameLoop() {
-	// 	  var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
-	// 	  //if can't find gamepads without Unknown Gamepad
-	// 	  if (!gamepads[valid]) {
-	// 	  	console.log("game loop stopped.");
-	// 	    return;
-	// 	  }
+		// function gameLoop() {
+		//   var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+		//   //if can't find gamepads without Unknown Gamepad
+		//   if (!gamepads[valid]) {
+		//   	console.log("game loop stopped.");
+		//     return;
+		//   }
 	  
 
-	// 	  var gp = gamepads[valid];
-	// 	  if (buttonPressed(gp.buttons[0])) {
-	// 	    console.log("Button 0 pressed");
-	// 	  } else if (buttonPressed(gp.buttons[2])) {
-	// 	    console.log("Button 2 pressed");
-	// 	  }
-	// 	  if (buttonPressed(gp.buttons[1])) {
-	// 	    console.log("Button 3 pressed");
-	// 	  } else if (buttonPressed(gp.buttons[3])) {
-	// 	    console.log("Button 4 pressed");
-	// 	  }
+		//   var gp = gamepads[valid];
+		//   if (buttonPressed(gp.buttons[0])) {
+		//     console.log("Button 0 pressed");
+		//   } else if (buttonPressed(gp.buttons[2])) {
+		//     console.log("Button 2 pressed");
+		//   }
+		//   if (buttonPressed(gp.buttons[1])) {
+		//     console.log("Button 3 pressed");
+		//   } else if (buttonPressed(gp.buttons[3])) {
+		//     console.log("Button 4 pressed");
+		//   }
 
-	// 	  start = requestAnimationFrame(gameLoop);
-	// 	}
+		//   start = requestAnimationFrame(gameLoop);
+		// }
 
- //  }
- // //  gamepadListener = () => {
+  }
 
-	// 	window.addEventListener("gamepadconnected", function(e) {
-	// 	  var gp = navigator.getGamepads()[e.gamepad.index];
-	// 	  gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
+  resetButtons = () => {
+  	this.circle = 0;
+		this.circleTriangle = 0;
+		this.circleRTwo = 0;
+		this.triangle = 0;
+		this.triangleRTwo = 0;
+		this.rTwo = 0;
+  }
 
-	// 	  // gameLoop();
-	// 	});
+  findInput = inputString => {
 
-	// 	window.addEventListener("gamepaddisconnected", function(e) {
-	// 	  gamepadInfo.innerHTML = "Waiting for gamepad.";
+  	this.resetButtons()
 
-	// 	  // cancelRequestAnimationFrame(start);
-	// 	});
+  	if (!inputString) {
+  		return;
+  	}
+  	//find the index of a button input in the options state array
+  	const i = this.state.options.findIndex( option => {
+  		return option.input === inputString;
+  	});
 
-	// }
 
-	// // checkGamepad = () => {
-	// // 	var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
-	// //   for (var i = 0; i < gamepads.length; i++) {
-	// //     var gp = gamepads[i];
-	// //     if (gp) {
-	// //       let gamepadInfo = "Gamepad connected at index " + gp.index + ": " + gp.id +
-	// //         ". It has " + gp.buttons.length + " buttons and " + gp.axes.length + " axes.";
-	// //       console.log(gamepadInfo);
+  	if (i === -1) {
+  		console.log("not found");
+  		return;
+  	}
 
-	// // 			if (gp.id.slice(0, 15) !== "Unknown Gamepad") {
-	// // 		  	console.log("Valid pad detected");
-	// // 		  	this.gameLoop(gp.index);
-	// // 		    clearInterval(interval);
+  	const option = this.state.options[i];
 
-	// // 		  }
+  	console.log("option:", option.name, "\nindex:", i);
+  	
+  	this.doCombo(option, i);
 
-	// //     }
-	// //   }
+  }
 
-	// // }
+  // gateInput = () => {
 
-	// buttonPressed = b => {
-	//   if (typeof(b) == "object") {
-	//     return b.pressed;
-	//   }
-	//   return b == 1.0;
-	// }
-
-	// gameLoop = i => {
-	//   var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
-	//   if (!gamepads) {
-	//     return;
-	//   }
-
-	//   // console.log(i);
-
-	//   var gp = gamepads[i];
-	//   if (this.buttonPressed(gp.buttons[0])) {
-	//     console.log("Button 0 pressed");
-	//   } else if (this.buttonPressed(gp.buttons[2])) {
-	//     console.log("Button 2 pressed");
-	//   }
-	//   if (this.buttonPressed(gp.buttons[1])) {
-	//     console.log("Button 3 pressed");
-	//   } else if (this.buttonPressed(gp.buttons[3])) {
-	//     console.log("Button 4 pressed");
-	//   }
-
-	//   start = requestAnimationFrame(this.gameLoop(i));
-	// }
+  // }
 
 
 
@@ -303,36 +458,7 @@ class Combo extends Component {
 
 
 
-			<Gamepad
-        onConnect={this.connectHandler}
-        onDisconnect={this.disconnectHandler}
 
-        onButtonChange={this.buttonChangeHandler}
-
-         gamepadIndex={0}
-      >
-      	<br />
-      </ Gamepad>
-			<Gamepad
-        onConnect={this.connectHandler}
-        onDisconnect={this.disconnectHandler}
-
-        onButtonChange={this.buttonChangeHandler}
-
-         gamepadIndex={1}
-      >
-      	<br />
-      </ Gamepad>
-			<Gamepad
-        onConnect={this.connectHandler}
-        onDisconnect={this.disconnectHandler}
-
-        onButtonChange={this.buttonChangeHandler}
-
-         gamepadIndex={2}
-      >
-      	<br />
-      </ Gamepad>
 
 
     
@@ -343,3 +469,4 @@ class Combo extends Component {
 	}
 }
 export default Combo;
+
