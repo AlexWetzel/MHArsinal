@@ -5,17 +5,21 @@ const Footer = () =>
   <footer className="page-footer">
     <div className="container">
       <div className="row">
-        <div className="col l6 s12">
-          <h5 className="white-text">Footer Content</h5>
-          <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        <div className="col s6">
+          <h5 className="white-text">About</h5>
+          <p className="grey-text text-lighten-4">Monster Hunter World has attracted the attention of many new players.
+           Monster Hunter Arms was made out of the desire to help new players and to contribute the the best game community ever!
+           <br />
+           <a href="/about">read more...</a>
+           </p>
         </div>
         <div className="col l4 offset-l2 s12">
           <h5 className="white-text">Links</h5>
           <ul>
-            <li><a className="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a className="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a className="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            <li><a className="grey-text text-lighten-3" href="/">Main Page</a></li>
+            <li><a className="grey-text text-lighten-3" href="/weapons">Weapons</a></li>
+            <li><a className="grey-text text-lighten-3" href="/combo">Combo Test</a></li>
+            <li><a className="grey-text text-lighten-3" href="/about">About</a></li>
           </ul>
         </div>
       </div>
@@ -25,7 +29,7 @@ const Footer = () =>
       © 2018 Alexander Wetzel 
       <br />
       Monster Hunter © 2004-2018 CAPCOM CO., LTD.
-      <a className="grey-text text-lighten-4 right" href="#!">Github Page</a>
+      <a className="grey-text text-lighten-4 right" target="_blank" href="/github">Github Page</a>
       </div>
     </div>
   </footer>

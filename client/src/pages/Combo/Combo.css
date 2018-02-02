@@ -23,10 +23,56 @@
 
 .combo {
 	/*position: absolute;*/
+	/*margin-top: 20px;*/
 		height: 600px;
 	z-index: 1;
 }
 
-.combo .col .s6 {
+.combo .s6 {
+	margin-top: 150px;
 	position: relative;
+/*	border-width: 1px;
+	border-color: white;
+	border-style: solid;
+	width: 300px;
+	height: 500px;*/
 }
+#combo-title {
+
+		width: 80%;
+margin: 20px 10%;
+		position: absolute;
+		z-index: 1;
+
+}
+#combo-title h1, #combo-title hr {
+
+	width: 100%;
+	margin: auto;
+	color: white;
+	/*margin:0px 0px;*/
+/*	position: absolute;
+	color: white;	*/
+
+}
+
+.combo h3 {
+	left: 20%;
+	position: absolute;
+	z-index: 1;
+	color: white;
+}
+
+.border-panel {
+
+/*	position: absolute;
+	z-index: 1;
+	border-width: 1px;
+	border-color: white;
+	border-style: solid;
+	width: 300px;
+	height: 500px;*/
+}
+/*#combo-title hr {
+	margin: 0px, 100px;
+}*/

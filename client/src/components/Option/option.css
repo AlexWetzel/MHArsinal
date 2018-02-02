@@ -1,6 +1,15 @@
 .option {
 	position: absolute;
-	left: 55%;
+	left: 20%;
+}
+
+.option {
+	background-color: #31474A;
+	border-radius: 50px;
+	height: 64px;
+	min-width: 500px;
+	float: left;
+
 }
 
 .first-icon, .second-icon {
@@ -12,9 +21,14 @@
 	background-repeat: no-repeat;
 }
 
+
 .option p {
 	float: left;
 	font-weight: bold;
+}
+
+.option .card-content {
+	margin: 0px, 10px;
 }
 
 .option .secondary-icon {

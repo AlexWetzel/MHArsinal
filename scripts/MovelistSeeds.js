@@ -55,7 +55,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB10",
@@ -87,7 +87,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",
@@ -152,7 +152,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",
@@ -188,7 +188,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",
@@ -220,7 +220,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",
@@ -312,7 +312,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       }, 
       {
         moveID: "CB011",
@@ -353,7 +353,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",
@@ -389,7 +389,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB13",
-        input: "hold triangle"
+        input: "triangle"
       },
       {
         moveID: "CB18",
@@ -413,7 +413,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",
@@ -449,7 +449,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",
@@ -654,7 +654,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",
@@ -687,7 +687,7 @@ const movelistSeed = [
       // },
       {
         moveID: "CB08",
-        input: "hold circle"
+        input: "circle"
       },
       {
         moveID: "CB09",

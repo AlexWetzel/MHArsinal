@@ -24,8 +24,8 @@ export default {
 	enterRight(target, cb) {
 		return TweenMax
 			.from(target, 0.5, {
-
-				left: "100%",
+				// width: "600px",
+				left: "150%",
 				onComplete() {
 					cb();
 				},

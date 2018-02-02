@@ -1,16 +1,17 @@
 .attack {
 	float: right;
 	position: absolute;
-	top: 180px;
-	left: 30%;
+	top: 100px;
+	left: 18%;
 
 }
 
-.card {
+.attack {
 	background-color: #31474A;
 	border-radius: 50px;
 	height: 64px;
 	min-width: 300px;
+	width: 500px;
 	float: left;
 
 }
@@ -25,11 +26,4 @@
 
 .card .card-content{
 	padding: 16px;
-}
-
-.button-icon {
-	margin-top: -5px;
-	height: 40px;
-	width: auto;
-	float: left;
 }

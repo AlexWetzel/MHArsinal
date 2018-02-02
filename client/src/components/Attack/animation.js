@@ -39,16 +39,22 @@ export default {
 				break;
 			case 3:
 				val = "340px";
+			case 4:
+				val = "420px";
+			case 5:
+				val = "500px";
+			case 6:
+				val = "580px";
 				break;
+
 		}
 
 
 		return TweenMax
 			.from(target, 0.5, {
-				
-					left: "55%",
-					top: val
-				,
+				left: "130%",
+				top: val,
+				width: "600px",
 				onComplete() {
 					cb();
 				},

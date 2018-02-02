@@ -20,10 +20,17 @@
 
 	position: relative;
 	margin: auto;
-	background-image: url('https://assets.vg247.com/current//2017/12/monster_hunter_world_Jagras.jpg');
 	background-size: cover;
 	width: 580px;
 	height: 300px;
+}
+
+.weapons-window {
+		background-image: url('https://assets.vg247.com/current//2017/12/monster_hunter_world_Jagras.jpg');
+}
+
+.combo-window {
+		background-image: url('./images/HBG.jpg');
 }
 
 

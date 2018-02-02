@@ -19,7 +19,7 @@ const Weapons = () =>
 				<hr />
 				<p>
 					The Monster Hunter series is known for its mechanical depth and its slow, methodical combat.
-					While most action games have lightning-fast attacks for quick reacting aand responsive controls, Monster Hunter's weapons are relatively slow in comparison.
+					While most action games have lightning-fast attacks for quick reacting and responsive controls, Monster Hunter's weapons are relatively slow in comparison.
 					This is because the weapon's animations are lengthy, which sells the weight of each weapon, making attack motions satisfying.
 					On the other hand, players used to fast action games get the impression that the combat is clunky and unresponsive.
 					The key to understanding the combas is to adapt to the pace, calculate moves carefully, predict the monsters' movements, and look for openings to exploit, rather than mashing buttons and dodging attack on reaction.

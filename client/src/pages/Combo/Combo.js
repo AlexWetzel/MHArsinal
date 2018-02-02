@@ -7,40 +7,6 @@ import InfoPanel from "./../../components/InfoPanel";
 import gamepad from "./../../utils/gamepad.js";
 import './Combo.css'
 
-// import Gamepad from 'react-gamepad';
-
-
-			// <Gamepad
-   //      onConnect={this.connectHandler}
-   //      onDisconnect={this.disconnectHandler}
-
-   //      onButtonChange={this.buttonChangeHandler}
-
-   //       gamepadIndex={0}
-   //    >
-   //    	<br />
-   //    </ Gamepad>
-			// <Gamepad
-   //      onConnect={this.connectHandler}
-   //      onDisconnect={this.disconnectHandler}
-
-   //      onButtonChange={this.buttonChangeHandler}
-
-   //       gamepadIndex={1}
-   //    >
-   //    	<br />
-   //    </ Gamepad>
-			// <Gamepad
-   //      onConnect={this.connectHandler}
-   //      onDisconnect={this.disconnectHandler}
-
-   //      onButtonChange={this.buttonChangeHandler}
-
-   //       gamepadIndex={2}
-   //    >
-   //    	<br />
-   //    </ Gamepad>
-
 
 
 class Combo extends Component {
@@ -51,7 +17,7 @@ class Combo extends Component {
 		this.start;
 		this.interval;
 		this.valid;
-		this.sensitivity = 5;
+		this.sensitivity = 10;
 
 		//Each used button combination gets a counter
 		this.circle = 0;
@@ -73,7 +39,7 @@ class Combo extends Component {
 	componentDidMount() {
     // Load articles after the state changes
 
-    this.valid = 2;
+    this.valid = 0;
     console.log(this.valid);
 
 		this.loadMovelist();
@@ -120,12 +86,12 @@ class Combo extends Component {
 	  // const = input;
 	  if(gp.axes[1] < -0.9 && this.buttonPressed(gp.buttons[3])) {
 	  	console.log("triangle fwd");
-	  	this.findInput("fwd + triangle");
+	  	this.findInput("fwd-plus-triangle");
 	  }
 
 	  else if (this.buttonPressed(gp.buttons[1]) && (gp.axes[0] < -0.9 || gp.axes[0] > 0.9 || gp.axes[1] < -0.9 || gp.axes[1] > 0.9)) {
 	  	console.log("dir. circle");
-	  	this.findInput("dir. + circle");
+	  	this.findInput("dir-plus-circle");
 	  }
 	
 	  else if (this.buttonPressed(gp.buttons[1])) {
@@ -137,7 +103,7 @@ class Combo extends Component {
 	    	if (this.circleTriangle === this.sensitivity) {
 	    		console.log("circle triangle");
 
-	    		this.findInput("triangle + circle");
+	    		this.findInput("triangle-plus-circle");
 	    	}
 
 	    } else if (this.buttonPressed(gp.buttons[7])) {
@@ -146,7 +112,7 @@ class Combo extends Component {
 	    	if (this.circleRTwo === this.sensitivity) {
 	    		console.log("circle R2");
 
-	    		this.findInput("R2 + circle");
+	    		this.findInput("R2-plus-circle");
 	    	}
 	    } else {
 	    	this.circle ++;
@@ -165,9 +131,9 @@ class Combo extends Component {
 	    if (this.buttonPressed(gp.buttons[7])) {
 	    	this.triangleRTwo ++;
 
-	    	if (this.triangleRtwo === this.sensitivity) {
+	    	if (this.triangleRTwo === this.sensitivity) {
 	    		console.log("R2 + triangle");
-	    		this.findInput("R2 + triangle");
+	    		this.findInput("R2-plus-triangle");
 	    	}
 	    }	else {
 	    	this.triangle ++;
@@ -181,9 +147,9 @@ class Combo extends Component {
 	  else if (this.buttonPressed(gp.buttons[7])) {
 	    // console.log("R2");
 	    this.rTwo ++;
-    	if (this.ttriangle === this.sensitivity) {
+    	if (this.rTwo === this.sensitivity) {
     		console.log("triangle");
-    		this.findInput("triangle");
+    		this.findInput("R2");
     	}
 	  }
 
@@ -413,12 +379,25 @@ class Combo extends Component {
 		return (
 			<div id="combo-body">
 				<div className="shade" />
-				<div className="container">
+								<div id="combo-title" className="row">
+						<h1 className="center-align">Combo Test - Charge Blade</h1>
+						<hr />
+					</div>
 
+				<div className="container">
+			
+					
+					<div className="row combo">
 					
 
-					<div className="row combo">
 						<div className="col s6">
+							<h3>Current Attack:</h3>
+
+																<InfoPanel
+											key={this.state.attack.name}
+											name={this.state.attack.name}
+											description={this.state.attack.description}
+										/>
 							<ReactTransitionGroup>
 							<Attack
 								id={this.state.attack.moveID}
@@ -431,6 +410,9 @@ class Combo extends Component {
 						</div>
 
 						<div className="col s6">
+													<h3>Options:</h3>
+
+
 						<ReactTransitionGroup>
 							{this.state.options.map((option, index) => {
 								return (
@@ -450,11 +432,7 @@ class Combo extends Component {
 					</div>  
 				</div>
 
-				<InfoPanel
-					key={this.state.attack.name}
-					name={this.state.attack.name}
-					description={this.state.attack.description}
-				/>
+
 
 
 
