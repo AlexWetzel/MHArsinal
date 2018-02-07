@@ -6,7 +6,10 @@
   "scripts": {
     "seed": "node scripts/MovelistSeeds.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\""
+    "start":
+      "node scripts/MovelistSeeds.js",
+      "concurrently \"nodemon server.js\" \"npm run client\""
+    
   },
   "repository": {
     "type": "git",
