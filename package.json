@@ -5,27 +5,29 @@
   "main": "server.js",
   "scripts": {
     "seed": "node scripts/MovelistSeeds.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexWetzel/MHArsinal.git"
+    "url": "git+https://github.com/AlexWetzel/MHArms.git"
   },
   "author": "Alexander Wetzel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AlexWetzel/MHArsinal/issues"
+    "url": "https://github.com/AlexWetzel/MHArms/issues"
   },
-  "homepage": "https://github.com/AlexWetzel/MHArsinal#readme",
+  "homepage": "https://github.com/AlexWetzel/MHArms#readme",
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
-    "concurrently": "^3.5.0",
+    "concurrently": "^3.5.1",
     "express": "^4.16.2",
     "gsap": "^1.20.3",
     "joymap": "^1.0.1",
     "mongoose": "^4.13.9",
     "nodemon": "^1.11.0",
-    "react-gamepad": "^1.0.3"
+    "react-gamepad": "^1.0.3",
+    "nodemon": "^1.11.0"
   }
 }

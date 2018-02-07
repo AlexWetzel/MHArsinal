@@ -54,7 +54,7 @@ export default {
 			.from(target, 0.5, {
 				left: "130%",
 				top: val,
-				width: "600px",
+				// width: "600px",
 				onComplete() {
 					cb();
 				},
