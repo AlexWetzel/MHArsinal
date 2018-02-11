@@ -32,7 +32,7 @@ The stats are as follows:
 * Support: How well a weapon can synergize with fellow hunters.
 
 
-### Weapon tutoruals
+### Weapon Tutorials
 
 For more comprehensive information, weapon turtorials explain the mechanics of a weapon, its attacks, and how it should be played.
 
@@ -43,5 +43,4 @@ To put it simply, a combo is a string of attacks with little to no delay in betw
 
 The combo test lets you examine a weapon move-by-move, showing you your current attack, a description of that attack, and the different options you can 'combo' into with their button inputs.
 
-Clicking on one of the options will set it as the current attack, and display that attack's options. Alternatively, you can use a Playstation 4 controller to execute the displayed button input of an option to select it. (Note: this feature is experimental, and may not work under some circumstances)
-
+Clicking on one of the options will set it as the current attack, and display that attack's options. Alternatively, you can use a Playstation 4 controller to execute the displayed button input of an option to select it.
