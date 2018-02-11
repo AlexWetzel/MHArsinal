@@ -2,10 +2,10 @@
 
 ## Current Features
 
--Weapon overview summaries for blademaster weapons
--Charge blade tutorial
--Charge blade combo test
--Controller support for Dualshock 4 in Chrome (May not work under some circumstanes)
+* Weapon overview summaries for blademaster weapons
+* Charge blade tutorial
+* Charge blade combo test
+* Controller support for Dualshock 4 in Chrome (May not work under some circumstanes)
 
 
 ## What is Monster Hunter Arms?
