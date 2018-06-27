@@ -23,7 +23,7 @@ const Home = () =>
 
 	 		<div className="section">
 		 		<div className="row container">
-		 			<div className=" col s6">
+		 			<div className=" col s12 m6">
 		 				<a href="/weapons">
 			 				<div className="weapons-window">
 				 				<div className="window-shade"></div>
@@ -32,7 +32,7 @@ const Home = () =>
 			 				</div>
 		 				</a>
 		 			</div>
-		 			<div className="col s6">
+		 			<div className="col s12 m6">
 		 				<a href="/combo">
 				 			<div className="combo-window">
 				 				<div className="window-shade"></div>
@@ -71,11 +71,7 @@ const Home = () =>
 			 			name={"Sword & Shield"}
 			 			link={"/swordandshield"}
 			 			src={"./images/SnS_icon.png"}
-			 		/>
-			 	</div>
-
-
-			 	<div className="row">
+			 		/>			 	
 			 		<WeaponLink
 			 			key={"Dual Blades"}
 			 			name={"Dual Blades"}
@@ -93,11 +89,7 @@ const Home = () =>
 			 			name={"Hunting Horn"}
 			 			link={"/huntinghorn"}
 			 			src={"./images/HH_icon.png"}
-			 		/>
-			 	</div>
-
-
-			 	<div className="row">
+			 		/>			 	
 			 		<WeaponLink
 			 			key={"Lance"}
 			 			name={"Lance"}
@@ -115,11 +107,7 @@ const Home = () =>
 			 			name={"Switch Axe"}
 			 			link={"/switchaxe"}
 			 			src={"./images/SA_icon.png"}
-			 		/>
-			 	</div>
-
-
-			 	<div className="row">
+			 		/>			 	
 			 		<WeaponLink
 			 			key={"Charge Blade"}
 			 			name={"Charge Blade"}
@@ -138,10 +126,6 @@ const Home = () =>
 			 			link={"/lightbowgun"}
 			 			src={"./images/LBG_icon.png"}
 			 		/>
-			 	</div>
-
-
-			 	<div className="row">
 			 		<WeaponLink
 			 			key={"Heavy Bowgun"}
 			 			name={"Heavy Bowgun"}

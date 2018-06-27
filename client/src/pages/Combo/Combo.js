@@ -7,8 +7,6 @@ import InfoPanel from "./../../components/InfoPanel";
 import gamepad from "./../../utils/gamepad.js";
 import './Combo.css'
 
-
-
 class Combo extends Component {
 
 	constructor() {
@@ -44,7 +42,7 @@ class Combo extends Component {
 
 		this.loadMovelist();
 		this.gamepadListener();
-
+		gamepad.hello();
   }
 
   // Controller inputs ==============================================================================
@@ -62,11 +60,9 @@ class Combo extends Component {
 	  if (!gamepads[this.valid]) {
 	  	console.log("game loop stopped.");
 	    return;
-	  }
-  
+	  }  
 
 	  const gp = gamepads[this.valid];
-
 
 	  // const = input;
 	  if(gp.axes[1] < -0.9 && this.buttonPressed(gp.buttons[3])) {
@@ -137,8 +133,6 @@ class Combo extends Component {
     		this.findInput("R2");
     	}
 	  }
-
-
 	 
 	  // console.log("loop again");
 	  this.start = requestAnimationFrame(this.gameLoop);
@@ -190,8 +184,6 @@ class Combo extends Component {
 		  // cancelRequestAnimationFrame(start);
 		});
 
-
-
 		if (!('ongamepadconnected' in window)) {
 		  // No gamepad events available, poll instead.
 		  console.log("Checking for gamepads");
@@ -233,7 +225,6 @@ class Combo extends Component {
   	console.log("option:", option.name, "\nindex:", i);
   	
   	this.doCombo(option, i);
-
   }
 
 	//==================================================================================================
