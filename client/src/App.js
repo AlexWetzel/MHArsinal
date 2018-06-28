@@ -8,8 +8,6 @@ import About from './pages/About';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
-
-
 const App = () =>
   <Router>
     <div>
@@ -24,7 +22,6 @@ const App = () =>
       </Switch>
       <Footer />
     </div>
-
   </Router>;
 
 export default App;

@@ -1,6 +1,13 @@
-nav {
-	
+nav {	
 	background-color: #6E0A05;
+}
+
+.nav-button{
+	transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+	background-color: #8d2621;
 }
 
 .dropdown-button {

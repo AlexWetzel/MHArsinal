@@ -1,0 +1,18 @@
+.inactive {
+	background-color: grey;
+	overflow: auto;
+	margin: auto;
+	margin-top: 20px;
+	width: auto;
+}
+
+a {
+	color: white;
+}
+
+.inactive img {
+	margin: 10px;
+	height: 60px;
+	width: auto;
+	float: left;
+}

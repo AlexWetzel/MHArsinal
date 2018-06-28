@@ -3,7 +3,6 @@
 	overflow: auto;
 	margin: auto;
 	margin-top: 20px;
-	/*width: 360px;*/
 	width: auto;
 	transition: background-color 0.3s;
 }
@@ -22,3 +21,4 @@ a {
 	width: auto;
 	float: left;
 }
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import WeaponLink from './../../components/WeaponLink'
+import { WeaponLink, Inactive } from './../../components/WeaponLink';
 import "./home.css";
 
 const Home = () =>
@@ -17,7 +17,6 @@ const Home = () =>
 		 		With 14 uniqe weapons Monster Hunter World offers a variety of ways to hunt your prey.
 		 		However, mastering just one weapon can be difficult.
 		 		Monster Hunter Arms not only offers comprehensive weapon breakdowns, but also an interactive flowchart that displays every option after each attack.
-
 	 		</p>
 	 		</div>
 
@@ -54,55 +53,55 @@ const Home = () =>
 		 		</div>
 
 			 	<div className="row">
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Greatsword"}
 			 			name={"Greatsword"}
 			 			link={"/greatsword"}
 			 			src={"./images/GS_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Longsword"}
 			 			name={"Longsword"}
 			 			link={"/longsword"}
 			 			src={"./images/LS_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Sword & Shield"}
 			 			name={"Sword & Shield"}
 			 			link={"/swordandshield"}
 			 			src={"./images/SnS_icon.png"}
 			 		/>			 	
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Dual Blades"}
 			 			name={"Dual Blades"}
 			 			link={"/dualblades"}
 			 			src={"./images/DB_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Hammer"}
 			 			name={"Hammer"}
 			 			link={"/hammer"}
 			 			src={"./images/Ham_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Hunting Horn"}
 			 			name={"Hunting Horn"}
 			 			link={"/huntinghorn"}
 			 			src={"./images/HH_icon.png"}
 			 		/>			 	
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Lance"}
 			 			name={"Lance"}
 			 			link={"/lance"}
 			 			src={"./images/Lan_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Gunlance"}
 			 			name={"Gunlance"}
 			 			link={"/gunlance"}
 			 			src={"./images/GL_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Switch Axe"}
 			 			name={"Switch Axe"}
 			 			link={"/switchaxe"}
@@ -114,36 +113,33 @@ const Home = () =>
 			 			link={"/chargeblade"}
 			 			src={"./images/CB_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Insect Glaive"}
 			 			name={"Insect Glaive"}
 			 			link={"/insectglaive"}
 			 			src={"./images/IG_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Light Bowgun"}
 			 			name={"Light Bowgun"}
 			 			link={"/lightbowgun"}
 			 			src={"./images/LBG_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Heavy Bowgun"}
 			 			name={"Heavy Bowgun"}
 			 			link={"/heavybowgun"}
 			 			src={"./images/HBG_icon.png"}
 			 		/>
-			 		<WeaponLink
+			 		<Inactive
 			 			key={"Bow"}
 			 			name={"Bow"}
 			 			link={"/bow"}
 			 			src={"./images/Bow_icon.png"}
 			 		/>
 			 	</div>
-
-
 		 	</div>
-
-
 	  </div>
 	</div>;
+
 export default Home;
