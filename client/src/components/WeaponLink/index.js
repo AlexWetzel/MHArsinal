@@ -1,1 +1,2 @@
-export { default } from './WeaponLink';
+export * from './WeaponLink';
+export * from './Inactive';
