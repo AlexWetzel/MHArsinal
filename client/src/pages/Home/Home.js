@@ -26,7 +26,7 @@ const Home = () =>
 		 				<a href="/weapons">
 			 				<div className="weapons-window">
 				 				<div className="window-shade"></div>
-				 				<h3 className="center-align">Weapons Page</h3>
+				 				<h3 className="center-align">Weapons Overview</h3>
 
 			 				</div>
 		 				</a>
@@ -47,7 +47,7 @@ const Home = () =>
 		 	<div className="container">
 		 		<div className="row">
 			 		<div className="col s12">
-			 			<h3>Weapons</h3>
+			 			<h3>Weapon Guides</h3>
 			 			<hr />
 			 		</div>
 		 		</div>
