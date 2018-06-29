@@ -1,5 +1,6 @@
 import React from 'react';
 import { WeaponLink, Inactive } from './../../components/WeaponLink';
+import { LinkPanel } from './../../components/HeaderPanels';
 import "./home.css";
 
 const Home = () =>
@@ -22,25 +23,18 @@ const Home = () =>
 
 	 		<div className="section">
 		 		<div className="row container">
-		 			<div className=" col s12 m6">
-		 				<a href="/weapons">
-			 				<div className="weapons-window">
-				 				<div className="window-shade"></div>
-				 				<h3 className="center-align">Weapons Overview</h3>
-
-			 				</div>
-		 				</a>
-		 			</div>
-		 			<div className="col s12 m6">
-		 				<a href="/combo">
-				 			<div className="combo-window">
-				 				<div className="window-shade"></div>
-
-				 				<h3 className="center-align">Combo Test</h3>
-	
-			 				</div>
-		 				</a>
-		 			</div>
+		 			<LinkPanel
+		 				key={"Weapons"}
+		 				id={"Weapons"}
+		 				title={"Weapons Overview"}
+		 				link={"/weapons"}
+		 			/>
+		 			<LinkPanel
+		 				key={"Combo"}
+		 				id={"Combo"}
+		 				title={"Combo Test"}
+		 				link={"/combo"}
+		 			/>
 		 		</div>
 		 	</div>
 

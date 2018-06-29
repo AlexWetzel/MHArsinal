@@ -15,36 +15,7 @@
 .description {
 	padding-bottom: 80px;
 }
-.weapons-window, .combo-window {
-	position: relative;
-	margin: auto;
-	background-size: 620px, auto;
-	height: 300px;
 
-}
-
-.weapons-window {
-		background-image: url('https://assets.vg247.com/current//2017/12/monster_hunter_world_Jagras.jpg');
-}
-
-.combo-window {
-		background-image: url('./images/HBG.jpg');
-}
-
-.weapons-window h3, .combo-window h3{
-	position: absolute;
-	margin: 130px 0px;
-	width: 100%;
-}
-
-.weapons-window .window-shade, .combo-window .window-shade{	
-	position: absolute;
-	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
-	opacity: 0.6;
-	margin: 130px 0px;
-	height: 44px;
-	width: 100%;
-}
 
 
 #home-title {
@@ -58,14 +29,15 @@
 
 #home-title .title-shade {
 	position: absolute;
-	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
-	opacity: 0.6;
+	
+	/*opacity: 0.6;*/
 	margin: 150px 0px;
 	height: 60px;
 	width: 100%;
 }
 
 #home-title h1 {
+	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
 	position: absolute;
 	width: 100%;
 	color: white;

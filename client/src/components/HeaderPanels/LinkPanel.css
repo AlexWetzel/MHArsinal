@@ -1,0 +1,21 @@
+.link-panel {
+	position: relative;
+	margin: auto;
+	background-size: 620px, auto;
+	height: 300px;
+}
+
+#Weapons {
+	background-image: url('https://assets.vg247.com/current//2017/12/monster_hunter_world_Jagras.jpg');
+}
+
+#Combo {
+	background-image: url('./images/HBG.jpg');
+}
+
+.link-panel h3{
+	position: absolute;
+	margin: 130px 0px;
+	width: 100%;
+	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
+}
