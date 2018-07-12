@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './footer.css'
 
 const Footer = () =>
@@ -10,16 +11,16 @@ const Footer = () =>
           <p className="grey-text text-lighten-4">Monster Hunter World has attracted the attention of many new players.
            Monster Hunter Arms was made out of the desire to help new players and to contribute the the best game community ever!
            <br />
-           <a href="/about">read more...</a>
+           <Link to="/about">read more...</Link>
            </p>
         </div>
         <div className="col l4 offset-l2 s12">
           <h5 className="white-text">Links</h5>
           <ul>
-            <li><a className="grey-text text-lighten-3" href="/">Main Page</a></li>
-            <li><a className="grey-text text-lighten-3" href="/weapons">Weapons</a></li>
-            <li><a className="grey-text text-lighten-3" href="/combo">Combo Test</a></li>
-            <li><a className="grey-text text-lighten-3" href="/about">About</a></li>
+            <li><Link className="grey-text text-lighten-3" to="/">Main Page</Link></li>
+            <li><Link className="grey-text text-lighten-3" to="/weapons">Weapons</Link></li>
+            <li><Link className="grey-text text-lighten-3" to="/combo">Combo Test</Link></li>
+            {/* <li><a className="grey-text text-lighten-3" href="/about">About</a></li> */}
           </ul>
         </div>
       </div>
