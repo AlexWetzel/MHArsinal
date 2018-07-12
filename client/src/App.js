@@ -7,10 +7,11 @@ import ChargeBlade from './pages/ChargeBlade';
 import About from './pages/About';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollHelper';
 
 const App = () =>
-  <Router>
-    <div>
+  <Router onUpdate={() => window.scrollTo(0, 0)}>
+    <ScrollToTop>
     	<Nav />
       <Switch>
         <Route exact path="/" component={Home} />
@@ -21,7 +22,7 @@ const App = () =>
         <Route exact path="/github" component={() => window.location = 'https://github.com/AlexWetzel/MonsterHunterArms'} />
       </Switch>
       <Footer />
-    </div>
+    </ScrollToTop>
   </Router>;
 
 export default App;
