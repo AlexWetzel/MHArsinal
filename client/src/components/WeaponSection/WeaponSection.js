@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './weaponSection.css'
 
 const WeaponSection = props =>		
@@ -23,11 +24,8 @@ const WeaponSection = props =>
 		</div>
 
 		<div className="container">
-			<p>
-				{props.text}
-			</p>
-
-			<a href={props.link} class="waves-effect waves-light btn"><h5>Full Tutorial</h5></a>
+			<p>{props.text}</p>
+			<Link to={props.link} class="waves-effect waves-light btn"><h5>Full Tutorial</h5></Link>
 		</div>
 	</div>;
 

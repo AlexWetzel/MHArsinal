@@ -33,7 +33,6 @@ class Combo extends Component {
 		select: "1"
 	}
 
-
 	componentDidMount() {
     // Load articles after the state changes
 
@@ -277,70 +276,50 @@ class Combo extends Component {
 		return (
 			<div id="combo-body">
 				<div className="shade" />
-								<div id="combo-title" className="row">
-						<h1 className="center-align">Combo Test - Charge Blade</h1>
-						<hr />
-					</div>
+				<div id="combo-title" className="row">
+					<h1 className="center-align">Combo Test - Charge Blade</h1>
+					<hr />
+				</div>
 
-				<div className="container">
-			
-					
+				<div className="container">					
 					<div className="row combo">
-					
-
 						<div className="col s6">
 							<h3>Current Attack:</h3>
 
-																<InfoPanel
-											key={this.state.attack.name}
-											name={this.state.attack.name}
-											description={this.state.attack.description}
-										/>
-							<ReactTransitionGroup>
-							<Attack
-								id={this.state.attack.moveID}
-								key={this.state.attack.moveID}
+							<InfoPanel
+								key={this.state.attack.name}
 								name={this.state.attack.name}
-								select={this.state.select}
+								description={this.state.attack.description}
 							/>
+							<ReactTransitionGroup>
+								<Attack
+									id={this.state.attack.moveID}
+									key={this.state.attack.moveID}
+									name={this.state.attack.name}
+									select={this.state.select}
+								/>
 							</ReactTransitionGroup>
-
 						</div>
 
 						<div className="col s6">
-													<h3>Options:</h3>
-
-
-						<ReactTransitionGroup>
-							{this.state.options.map((option, index) => {
-								return (
-									<Option
-										index={index}
-										id={option.moveID}
-										key={option.moveID}
-										name={option.name}
-										input={option.input}
-										onClick={() => this.doCombo(option, index)}
-									/>
-								);
-							})}
+							<h3>Options:</h3>
+							<ReactTransitionGroup>
+								{this.state.options.map((option, index) => {
+									return (
+										<Option
+											index={index}
+											id={option.moveID}
+											key={option.moveID}
+											name={option.name}
+											input={option.input}
+											onClick={() => this.doCombo(option, index)}
+										/>
+									);
+								})}
 							</ReactTransitionGroup>
 						</div>
-
 					</div>  
 				</div>
-
-
-
-
-
-
-
-
-
-    
-
-
 			</div>
 		)
 	}
