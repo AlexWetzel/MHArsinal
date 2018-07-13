@@ -7,7 +7,7 @@ const WeaponSection = props =>
 		<div className="wide-section">
 			<div className="container row weapon-attributes">
 				<div className="col s2">
-					<img src={props.src}/>
+					<img src={props.src} alt={props.name}/>
 				</div>
 				<div className="col s10">
 					<h3>{props.name}</h3>

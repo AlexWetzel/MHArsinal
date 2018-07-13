@@ -1,32 +1,9 @@
-import { TweenMax, Elastic } from 'gsap';
-
-// const duration = 0.5;
+import { TweenMax } from 'gsap';
 
 export default {
-	// show(target, cb) {
-	// 	return TweenMax
-	// 		.from(target, 0.5, {
-	// 			opacity: 0,
-	// 			height: 0,
-	// 			onComplete() {
-	// 				cb();
-	// 			},
-	// 			ease: Elastic.easeOut.config(0.25, 1),
-	// 		});
-	// },
-	// hide(target, cb) {
-	// 	return TweenMax
-	// 		.to(target, 0.5, {
-	// 			opacity: 0,
-	// 			height: 0,
-	// 			onComplete() {
-	// 				cb();
-	// 			},
-	// 			ease: Elastic.easeIn.config(0.25, 1),
-	// 		});
-	// },
+
 	enterRight(target, cb, select) {
-		let val = "180px";
+		let val = "";
 		switch(select) {
 			case 0:
 				val = "100px";
@@ -39,17 +16,19 @@ export default {
 				break;
 			case 3:
 				val = "340px";
+				break;
 			case 4:
 				val = "420px";
+				break;
 			case 5:
 				val = "500px";
+				break;
 			case 6:
 				val = "580px";
 				break;
-
+			default:
+				val = "180px";
 		}
-
-
 		return TweenMax
 			.from(target, 0.5, {
 				left: "130%",
@@ -57,8 +36,7 @@ export default {
 				// width: "600px",
 				onComplete() {
 					cb();
-				},
-				
+				},				
 			});
 	},
 	leaveLeft(target, cb) {

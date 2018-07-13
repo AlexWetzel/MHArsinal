@@ -34,7 +34,7 @@ class Option extends Component {
 
   render() {
     return (      
-        <div id={this.props.id} className={"card option " + "o" + this.props.index} {...this.props}>
+        <div id={this.props.id} className={"card option o" + this.props.index} {...this.props}>
           <div className={"card-content white-text " + this.props.input}>
             <div className="first-icon"></div>
             <div className="secondary-icon">
